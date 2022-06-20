@@ -1,0 +1,44 @@
+---
+title: Connecting with a VPC
+permalink: /cloud/configuration/connecting-with-a-vpc
+---
+
+<InfoBox>
+
+To enable support for your account, please
+[contact Sales](https://cube.dev/contact/).
+
+</InfoBox>
+
+Cube Cloud supports connecting to databases residing in publicly-inaccessible
+VPCs. This includes connecting to more than one VPC as long as their IP ranges
+have no overlap.
+
+## AWS
+
+| Region         | VPC ID         | CIDR |
+| -------------- | -------------- | ---- |
+| `ca-central-1` | `XXXXXXXXXXXX` |      |
+| `eu-central-1` | `XXXXXXXXXXXX` |      |
+| `eu-west-1`    | `XXXXXXXXXXXX` |      |
+| `us-east-1`    | `XXXXXXXXXXXX` |      |
+| `us-east-2`    | `XXXXXXXXXXXX` |      |
+| `us-west-2`    | `XXXXXXXXXXXX` |      |
+
+For customers with VPCs in AWS, we send a [VPC peering
+request][aws-docs-vpc-peering] that must be accepted, either through the [AWS
+Web Console][aws-console] or through their preferred infrastructure provider.
+
+To accept the VPC peering request through the AWS Web Console, follow [the
+instructions here][aws-docs-accept-vpc-peering]. In Step 5, ensure **Modify my
+route tables now** is selected so that the necessary routes are created.
+
+## GCP
+
+> Instructions coming soon
+
+[aws-console]: https://console.aws.amazon.com/
+[aws-docs-vpc-peering]:
+  https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html
+[aws-docs-accept-vpc-peering]:
+  https://docs.aws.amazon.com/vpc/latest/peering/create-vpc-peering-connection.html#accept-vpc-peering-connection
